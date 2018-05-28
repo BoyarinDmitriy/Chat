@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "454762294027",
+    "firebase_url": "https://first-project-89f61.firebaseio.com",
+    "project_id": "first-project-89f61",
+    "storage_bucket": "first-project-89f61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454762294027:android:abd26a8b6e80618e",
+        "android_client_info": {
+          "package_name": "com.example.max.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454762294027-1lvke0dtuft53ntcjgruuc3fif4sh25f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.max.chatapp",
+            "certificate_hash": "c8c93f98f2e9b346fc33acb5010c61bdae082268"
+          }
+        },
+        {
+          "client_id": "454762294027-74ag8i940rs3duis1e6rq9aq0hr0ap5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcy2LdmQNnEk1CFbS8oAIDNB3A-rYsIhA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454762294027-74ag8i940rs3duis1e6rq9aq0hr0ap5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChatApp </string>
+    <string name="message_hint">Type message </string>
+    <string name="login_success">Welcome! </string>
+    <string name="login_unsuccefull">Can not login </string>
+    <string name="logout">You have logout </string>
+    <string name="greeting">Hi </string>
+</resources>
