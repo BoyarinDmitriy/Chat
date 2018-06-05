@@ -23,13 +23,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int SIGN_IN_REQUEST_CODE=1;
+    private final int SIGN_IN_REQUEST_CODE=1;
     private FirebaseListAdapter<ChatMessage> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         if(FirebaseAuth.getInstance().getCurrentUser() == null) {
             startActivityForResult(
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     EditText input = (EditText)findViewById(R.id.input);
 
                     FirebaseDatabase.getInstance()
-                            .getReference()
+                            .getReference("chats")
                             .push()
                             .setValue(new ChatMessage(input.getText().toString(),
                                     FirebaseAuth.getInstance()
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listOfMessages = (ListView)findViewById(R.id.list_of_messages);
 
         adapter = new FirebaseListAdapter<ChatMessage>(this, ChatMessage.class,
-                R.layout.message_temp, FirebaseDatabase.getInstance().getReference()) {
+                R.layout.message_temp, FirebaseDatabase.getInstance().getReference("chats")) {
             @Override
             protected void populateView(View v, ChatMessage model, int position) {
                 TextView messageText = (TextView)v.findViewById(R.id.message_text);
@@ -86,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
                 messageText.setText(model.getMessageText());
                 messageUser.setText(model.getMessageUser());
-
                 messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
                         model.getMessageTime()));
             }
